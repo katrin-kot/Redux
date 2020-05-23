@@ -1,50 +1,342 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/black.css" />
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? 'css/print/pdf.css'
+        : 'css/print/paper.css';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Redux</h1>
+          <h2>
+            state management library
+          </h2>
+          <img
+            style="
+              border: none;
+              left: -30px;
+              position: relative;
+              width: 400px;
+              background: none;
+              box-shadow: none;
+            "
+            src="lib/images/redux-logo-9CA6836C12-seeklogo.com.png"
+            alt="redux"
+          />
+          <p>
+            <small
+              >Presentation by
+              <a href="https://github.com/katrin-kot">katrin-kot</a></small
+            >
+          </p>
+        </section>
+        <section>
+          <h3>
+            Redux is an open source JavaScript library for managing application
+            state.
+          </h3>
+          <p>
+            The library was created in 2015 by Daniel Abramov and Andrew Clark.
+            The first version Abramov created in preparation for the React
+            Europe conference. According to Abramov, he tried to create an
+            implementation of the Flux idea with a different logic.
+          </p>
+        </section>
+        <section>
+          <img
+            style="
+              border: none;
+              left: -30px;
+              position: relative;
+              width: 1000px;
+              background: none;
+              box-shadow: none;
+            "
+            src="lib/images/1_MZj98upz0EUO52VAB4B41Q.jpeg"
+            alt="redux-fun"
+          />
+        </section>
+        <section>
+          <h5>Redux can be described in three fundamental principles:</h5>
+          <ul>
+            <li class="fragment" data-fragment-index="1">
+              Single source of truth.
+            </li>
+            <img
+              class="fragment"
+              data-fragment-index="1"
+              style="
+                border: none;
+                left: -30px;
+                position: relative;
+                width: 500px;
+                background: none;
+                box-shadow: none;
+              "
+              src="lib/images/true.PNG"
+              alt="true"
+            />
+            <li class="fragment" data-fragment-index="2">State is read-only</li>
+            <img
+              class="fragment"
+              data-fragment-index="2"
+              style="
+                border: none;
+                left: -30px;
+                position: relative;
+                width: 500px;
+                background: none;
+                box-shadow: none;
+              "
+              src="lib/images/dispatch.PNG"
+              alt="dispatch"
+            />
+            <li class="fragment" data-fragment-index="3">
+              Changes are made with pure functions
+            </li>
+            <img
+              class="fragment"
+              data-fragment-index="3"
+              style="
+                border: none;
+                left: -30px;
+                position: relative;
+                width: 500px;
+                background: none;
+                box-shadow: none;
+              "
+              src="lib/images/pure.PNG"
+              alt="pure"
+            />
+          </ul>
+        </section>
+        <section>
+          <h3>Main selling points:</h3>
+          <ul>
+            <li class="fragment" data-fragment-index="1">
+              Redux helps you write applications,run in different environments
+              and are easy to test.
+            </li>
+            <li class="fragment" data-fragment-index="2">
+              Redux is compatible with many other frameworks like React, Angular
+              and even pure JavaScript.
+            </li>
+            <li class="fragment" data-fragment-index="3">
+              The entire state of an application is stored in one central
+              location.
+            </li>
+            <li class="fragment" data-fragment-index="4">
+              The Redux DevTools make it easy to trace your application's state
+              changed.
+            </li>
+            <li class="fragment" data-fragment-index="5">
+              Redux works with any UI layer, and has a large ecosystem of addons
+              to fit your needs.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <img
+            style="
+              border: none;
+              left: -30px;
+              position: relative;
+              width: 700px;
+              background: none;
+              box-shadow: none;
+            "
+            src="lib/images/Redux Data Flow.png"
+            alt="redux-flow"
+          />
+        </section>
+        <section>
+          <h3>What is a state?</h3>
+          <h2>The data that defines the condition of a system</h2>
+          <p>To-do list items, user auth information, Facebook posts etc...</p>
+          <img
+            class="fragment"
+            data-fragment-index="1"
+            style="
+              border: none;
+              left: -30px;
+              position: relative;
+              width: 400px;
+              background: none;
+              box-shadow: none;
+            "
+            src="lib/images/2page.png"
+            alt="state"
+          />
+        </section>
+        <section>
+          <img
+            style="
+              border: none;
+              left: -30px;
+              position: relative;
+              width: 900px;
+              background: none;
+              box-shadow: none;
+            "
+            src="lib/images/actions.jpg"
+            alt="actions"
+          />
+        </section>
+        <section>
+          <h3>Examples</h3>
+          <p class="fragment" data-fragment-index="2">actions.js</p>
+          <img
+            class="fragment"
+            data-fragment-index="2"
+            style="
+              border: none;
+              left: -30px;
+              position: relative;
+              width: 500px;
+              background: none;
+              box-shadow: none;
+            "
+            src="lib/images/action.png"
+            alt="true"
+          />
+        </section>
+        <section>
+          <h3>Examples</h3>
+          <p class="fragment" data-fragment-index="3">reducer.js</p>
+          <img
+            class="fragment"
+            data-fragment-index="3"
+            style="
+              border: none;
+              left: -30px;
+              position: relative;
+              width: 700px;
+              background: none;
+              box-shadow: none;
+            "
+            src="lib/images/reducer.png"
+            alt="true"
+          />
+        </section>
+        <section>
+          <h3>Examples</h3>
+          <p class="fragment" data-fragment-index="1">index.js</p>
+          <img
+            class="fragment"
+            data-fragment-index="1"
+            style="
+              border: none;
+              left: -30px;
+              position: relative;
+              width: 900px;
+              background: none;
+              box-shadow: none;
+            "
+            src="lib/images/subsc.png"
+            alt="true"
+          />
+        </section>
+        <section>
+          <img
+            style="
+              border: none;
+              left: -30px;
+              position: relative;
+              width: 700px;
+              background: none;
+              box-shadow: none;
+            "
+            src="lib/images/carbon.png"
+            alt="true"
+          />
+        </section>
+        <section>
+          <p>
+            The component responds to what happens in other components(pattern
+            observer)
+          </p>
+          <img
+            class="fragment"
+            data-fragment-index="1"
+            style="
+              border: none;
+              left: -30px;
+              position: relative;
+              width: 600px;
+              background: none;
+              box-shadow: none;
+            "
+            src="lib/images/observer.png"
+            alt="true"
+          />
+        </section>
+        <section>
+          <h2>
+            Useful links
+          </h2>
+          <ul>
+            <li><a href="https://redux.js.org/">https://redux.js.org/</a></li>
+            <li>
+              <a href="https://metanit.com/web/react/5.3.php"
+                >https://metanit.com/web/react/5.3.php</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://medium.com/@ramonvictor/tic-tac-toe-js-redux-pattern-in-plain-javascript-fffe37f7c47a"
+                >https://medium.com/@ramonvictor/tic-tac-toe-js-redux-pattern-in-plain-javascript-fffe37f7c47a</a
+              >
+            </li>
+          </ul>
+        </section>
+        <section
+          data-background="lib/images/bue.gif"
+          data-background-size="800px"
+        >
+          <h2>Thank you!</h2>
+        </section>
+      </div>
+    </div>
 
-		<script src="js/reveal.js"></script>
+    <script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				hash: true,
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/highlight/highlight.js' },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
-		</script>
-	</body>
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        hash: true,
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/highlight/highlight.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+        ],
+      });
+    </script>
+  </body>
 </html>
