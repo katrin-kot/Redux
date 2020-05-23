@@ -65,6 +65,10 @@
             Europe conference. According to Abramov, he tried to create an
             implementation of the Flux idea with a different logic.
           </p>
+          <aside class="notes">
+            The library was created by Daniel Abramov and Andrew Clark. Redux is
+            based on the Flux idea.
+          </aside>
         </section>
         <section>
           <img
@@ -79,6 +83,10 @@
             src="lib/images/1_MZj98upz0EUO52VAB4B41Q.jpeg"
             alt="redux-fun"
           />
+          <aside class="notes">
+            THE MAIN DIFFERENCE IS THAT FLUX HAD A MULTIPLE STORE AND REDUX HAS
+            SINGLE STORE
+          </aside>
         </section>
         <section>
           <h5>Redux can be described in three fundamental principles:</h5>
@@ -133,6 +141,12 @@
               alt="pure"
             />
           </ul>
+          <aside class="notes">
+            1. The global state of your application is stored in an object tree
+            within a single store. 2.The only way to change the state is to emit
+            an action, an object describing what happened.3.Its return value is
+            the same for the same arguments
+          </aside>
         </section>
         <section>
           <h3>Main selling points:</h3>
@@ -158,6 +172,10 @@
               to fit your needs.
             </li>
           </ul>
+          <aside class="notes">
+            Redux helps you write applications,it is compatible,it works with
+            any UI layer
+          </aside>
         </section>
         <section>
           <img
@@ -172,6 +190,13 @@
             src="lib/images/Redux Data Flow.png"
             alt="redux-flow"
           />
+          <aside class="notes">
+            The data lifecycle in any Redux app follows these 4 steps:1. You
+            call store.dispatch with action. 2. 2. The Redux store calls the
+            reducer function you gave it.3. The root reducer may combine the
+            output of multiple reducers into a single state tree. 4. The Redux
+            store saves the complete state tree returned by the root reducer.
+          </aside>
         </section>
         <section>
           <h3>What is a state?</h3>
@@ -191,6 +216,9 @@
             src="lib/images/2page.png"
             alt="state"
           />
+          <aside class="notes">
+            THE DATA THAT DEFINES THE CONDITION OF A SYSTEM
+          </aside>
         </section>
         <section>
           <img
@@ -205,6 +233,10 @@
             src="lib/images/actions.jpg"
             alt="actions"
           />
+          <aside class="notes">
+            The only way to change the state is to emit an action, an object
+            describing what happened.
+          </aside>
         </section>
         <section>
           <h3>Examples</h3>
@@ -241,6 +273,10 @@
             src="lib/images/reducer.png"
             alt="true"
           />
+          <aside class="notes">
+            Reducers are just pure functions that take the previous state and an
+            action, and return the next state.
+          </aside>
         </section>
         <section>
           <h3>Examples</h3>
@@ -259,6 +295,11 @@
             src="lib/images/subsc.png"
             alt="true"
           />
+          <aside class="notes">
+            To create our store, we use a createStore() function from redux. It
+            takes the reducer, state - or if you like to call it preloaded state
+            and in some cases enhancers e.g. applymiddleware().
+          </aside>
         </section>
         <section>
           <img
@@ -273,6 +314,10 @@
             src="lib/images/carbon.png"
             alt="true"
           />
+          <aside class="notes">
+            This is an example function createStore() in redux. It return an
+            object with many methods.
+          </aside>
         </section>
         <section>
           <p>
@@ -293,6 +338,10 @@
             src="lib/images/observer.png"
             alt="true"
           />
+          <aside class="notes">
+            We have component, that responds to what happens in other
+            components.
+          </aside>
         </section>
         <section>
           <h2>
@@ -312,6 +361,7 @@
               >
             </li>
           </ul>
+          <aside class="notes">This is documentation links</aside>
         </section>
         <section
           data-background="lib/images/bue.gif"
